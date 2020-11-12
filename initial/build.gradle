@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.3.3.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
+	id 'application'
 }
 
 group = 'com.example'
@@ -17,6 +18,8 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
+	compile "joda-time:joda-time:2.2"
+	testCompile "junit:junit:4.12"
 }
 
 test {
